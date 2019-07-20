@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>博主: {{blogger}}</h1>
+    
+    <h3>个人经历简介</h3>
+    
+    <p>{{blogger.bio}}</p>
+    
+    
+
+    {% if blog_list %}
+    <h3>博客 列表</h3>
+    <ul>
+
+      {% for blog in blog_list %}
+      <li>
+        <a href="{{ blog.get_absolute_url }}">{{ blog.name }}</a> ({{blog.post_date}})</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>这个博主还没有发表博客</p>
+    {% endif %}       
+{% endblock %}

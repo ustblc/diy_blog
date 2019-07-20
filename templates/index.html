@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>DIY Blog 主页</h1>
+
+<p>欢迎来到 <em>DIY Blog</em>, 一个非常基础的Django博客网站，作为一个 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog">评估任务</a> ，其用于Mozilla开发者网络上的Django学习模块.</p>
+
+
+
+<h2>UML模型</h2>
+<p>站点的django模型结构的UML图如下所示. </p>
+
+<div>
+{% load static %}
+<img src="{% static "images/diy_django_mini_blog_models.png" %}" alt="My image" style="width:555px;height:540px;"/>
+</div>  
+
+{% endblock %}
